@@ -15,7 +15,7 @@ let pages = [
 	{url: "my-portfolio/projects", title: "Projects"},
     {url: "my-portfolio/contact", title: "Contact"},
     {url: "https://github.com/autumnartist", title: "GitHub"},
-    {url: "my-portfolioresume/", title: "Resume"}
+    {url: "my-portfolio/resume/", title: "Resume"}
 ];
 
 // let pages = [
