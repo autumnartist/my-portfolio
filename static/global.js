@@ -11,20 +11,20 @@ let currentLink = navLinks.find(a => a.host === location.host && a.pathname === 
 currentLink?.classList.add("current");
 
 // let pages = [
-// 	{url: "my-portfolio", title: "Home"},
-// 	{url: "my-portfolio/projects", title: "My Projects"},
-//     {url: "my-portfolio/contact", title: "Contact Me"},
+// 	{url: "./", title: "Home"},
+// 	{url: "/projects", title: "My Projects"},
+//     {url: "/contact", title: "Contact Me"},
 //     {url: "https://github.com/autumnartist", title: "GitHub"},
-//     {url: "my-portfolio/resume/", title: "Resume"}
+//     {url: "/resume", title: "Resume"}
 // ];
 
 let pages = [
-	{url: "./", title: "Home"},
-	{url: "/projects", title: "My Projects"},
-    {url: "/contact", title: "Contact Me"},
-    {url: "https://github.com/autumnartist", title: "GitHub"},
-    {url: "/resume", title: "Resume"}
-];
+    { url: "/my-portfolio/",         title: "Home" },
+    { url: "/my-portfolio/projects", title: "My Projects" },
+    { url: "/my-portfolio/contact",  title: "Contact Me" },
+    { url: "https://github.com/autumnartist", title: "GitHub" },
+    { url: "/my-portfolio/resume",   title: "Resume" }
+  ];
 
 let nav = document.createElement("nav");
 nav.classList.add("navBar");
