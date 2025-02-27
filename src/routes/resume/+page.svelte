@@ -1,9 +1,8 @@
 <svelte:head>
-  <title>My Resume</title>
+  <title>Resume</title>
 </svelte:head>
 
 <body style="max-width:100ch; margin-inline: max(1em, (100% - 100ch) / 2)">
-    <title>Resume</title>
     <h1>Autumn's Resume</h1>
     <article style="text-wrap:balance;">
         <h2>EDUCATION:</h2>

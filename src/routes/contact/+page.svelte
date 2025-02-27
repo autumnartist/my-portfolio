@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Contact me</title>
+  <title>Contact Me</title>
 </svelte:head>
 
 <body style="max-width:100ch; margin-inline: max(1em, (100% - 100ch) / 2)">

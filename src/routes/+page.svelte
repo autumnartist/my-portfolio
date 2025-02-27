@@ -1,7 +1,11 @@
 <script>
     import projects from "$lib/projects.json";
     import Project from "$lib/Project.svelte";
-  </script>
+</script>
+
+<svelte:head>
+  <title>Home</title>
+</svelte:head>
 
 <body style="max-width:100ch; margin-inline: max(1em, (100% - 100ch) / 2)">
     <h1>Autumn R. Artist</h1>
