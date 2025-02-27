@@ -10,6 +10,14 @@ let navLinks = $$("nav a");
 let currentLink = navLinks.find(a => a.host === location.host && a.pathname === location.pathname);
 currentLink?.classList.add("current");
 
+// let pages = [
+// 	{url: "my-portfolio", title: "Home"},
+// 	{url: "my-portfolio/projects", title: "My Projects"},
+//     {url: "my-portfolio/contact", title: "Contact Me"},
+//     {url: "https://github.com/autumnartist", title: "GitHub"},
+//     {url: "my-portfolio/resume/", title: "Resume"}
+// ];
+
 let pages = [
 	{url: "./", title: "Home"},
 	{url: "projects", title: "My Projects"},
@@ -27,7 +35,7 @@ for (let p of pages) {
 	let title = p.title;
 	// Create link and add it to nav
     // const ARE_WE_HOME = document.documentElement.classList.contains("home");
-    url = !ARE_WE_HOME && !url.startsWith("http") ? "my-portfolio/" + url : url
+    // url = !ARE_WE_HOME && !url.startsWith("http") ? "my-portfolio/" + url : url
     let a = document.createElement("a");
     a.href = url;
     a.textContent = title;
