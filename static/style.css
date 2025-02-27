@@ -16,7 +16,8 @@ body {
   display: flex;
   /* padding: 0.5em; */
   margin-bottom: 1cm;
-  
+  margin-right: 4cm;
+  margin-left: 4cm;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: var(--border-color);
@@ -76,14 +77,19 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
 }
 
-.indiProject{
+.projectsHighlights{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+}
+
+/* .indiProject{
   margin: 0.5em;
   display:grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
   line-height: 1.1;
   text-wrap:balance;
-}
+} */
 
 .color-scheme{
   position:absolute;
