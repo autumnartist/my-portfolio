@@ -1,37 +1,43 @@
 <script>
     import { page } from "$app/stores";
 
-    let pages = [
-        {url: "./", title: "Home"},
-        {url: "/projects", title: "My Projects"},
-        {url: "/contact", title: "Contact Me"},
-        {url: "https://github.com/autumnartist", title: "GitHub"},
-        {url: "/resume", title: "Resume"}
-    ];
-    let colorScheme = "light dark";
-
     // let pages = [
-    //     { url: "/my-portfolio/",         title: "Home" },
-    //     { url: "/my-portfolio/projects", title: "My Projects" },
-    //     { url: "/my-portfolio/contact",  title: "Contact Me" },
-    //     { url: "https://github.com/autumnartist", title: "GitHub" },
-    //     { url: "/my-portfolio/resume",   title: "Resume" }
-    //   ];
+    //     {url: "./", title: "Home"},
+    //     {url: "/projects", title: "My Projects"},
+    //     {url: "/contact", title: "Contact Me"},
+    //     {url: "https://github.com/autumnartist", title: "GitHub"},
+    //     {url: "/resume", title: "Resume"}
+    // ];
+
+    let localStorage = globalThis.localStorage ?? {};
+    let colorScheme = localStorage.colorScheme ?? "light dark";
+
+    let root = globalThis?.document?.documentElement;
+    $: root?.style.setProperty("color-scheme", colorScheme);
+    $: localStorage.colorScheme = colorScheme;
+
+
+
+    let pages = [
+        { url: "/my-portfolio/",         title: "Home" },
+        { url: "/my-portfolio/projects", title: "My Projects" },
+        { url: "/my-portfolio/contact",  title: "Contact Me" },
+        { url: "https://github.com/autumnartist", title: "GitHub" },
+        { url: "/my-portfolio/resume",   title: "Resume" }
+      ];
 </script>
 
 <body>
-    {
-        JSON.stringify($page)
-    }
-
     <label class="color-scheme">
         Theme:
-        <select>
+        <select bind:value={ colorScheme }>
             <option value="light dark">Automatic</option>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
         </select>
     </label>
+    <!-- {colorScheme} -->
+
       
     <nav class="navBar">
         {#each pages as p}

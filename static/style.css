@@ -90,7 +90,7 @@ body {
   text-wrap:balance;
 } */
 
-/* .color-scheme{
+.color-scheme{
   position:absolute;
   top: 1rem;
   right: 1rem;
@@ -98,4 +98,4 @@ body {
   gap: 4px;
   font-family: inherit;
   font-size: 80%;
-} */
+}

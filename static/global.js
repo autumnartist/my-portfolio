@@ -52,7 +52,7 @@ function $$ (selector, context = document) {
 
 // }
 
-//dark mode
+//DARK MODE
 // document.body.insertAdjacentHTML("afterbegin", `
 // 	<label class="color-scheme">
 // 		Theme:
