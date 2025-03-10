@@ -12,9 +12,9 @@ body {
     font: 100%/1.5 system-ui;
 }
 
-.navBar {
+/* navBar styling */
+/* .navBar {
   display: flex;
-  /* padding: 0.5em; */
   margin-bottom: 1cm;
   margin-right: 4cm;
   margin-left: 4cm;
@@ -24,7 +24,6 @@ body {
   
   text-align: center;
 }
-/* Style for each link in navBar */
 .navBar a {
   text-decoration: none;
   color: inherit;
@@ -46,7 +45,7 @@ body {
   border-bottom-width: 0.4em;
   border-bottom-style: solid;
   border-bottom-color: var(--border-color);;
-}
+} */
 
 .contactFields{
   /* font: inherit;
@@ -91,7 +90,7 @@ body {
   text-wrap:balance;
 } */
 
-.color-scheme{
+/* .color-scheme{
   position:absolute;
   top: 1rem;
   right: 1rem;
@@ -99,4 +98,4 @@ body {
   gap: 4px;
   font-family: inherit;
   font-size: 80%;
-}
+} */
