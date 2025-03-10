@@ -1,13 +1,13 @@
 <script>
     import { page } from "$app/stores";
 
-    let pages = [
-        {url: "./", title: "Home"},
-        {url: "/projects", title: "My Projects"},
-        {url: "/contact", title: "Contact Me"},
-        {url: "https://github.com/autumnartist", title: "GitHub"},
-        {url: "/resume", title: "Resume"}
-    ];
+    // let pages = [
+    //     {url: "./", title: "Home"},
+    //     {url: "/projects", title: "My Projects"},
+    //     {url: "/contact", title: "Contact Me"},
+    //     {url: "https://github.com/autumnartist", title: "GitHub"},
+    //     {url: "/resume", title: "Resume"}
+    // ];
 
     let localStorage = globalThis.localStorage ?? {};
     let colorScheme = localStorage.colorScheme ?? "light dark";
@@ -18,13 +18,13 @@
 
 
 
-    // let pages = [
-    //     { url: "/my-portfolio/",         title: "Home" },
-    //     { url: "/my-portfolio/projects", title: "My Projects" },
-    //     { url: "/my-portfolio/contact",  title: "Contact Me" },
-    //     { url: "https://github.com/autumnartist", title: "GitHub" },
-    //     { url: "/my-portfolio/resume",   title: "Resume" }
-    //   ];
+    let pages = [
+        { url: "/my-portfolio/",         title: "Home" },
+        { url: "/my-portfolio/projects", title: "My Projects" },
+        { url: "/my-portfolio/contact",  title: "Contact Me" },
+        { url: "https://github.com/autumnartist", title: "GitHub" },
+        { url: "/my-portfolio/resume",   title: "Resume" }
+      ];
 </script>
 
 <body>
