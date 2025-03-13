@@ -6,7 +6,11 @@
 <article class="indiProject">
     <svelte:element this={"h" + hLevel}>{data.title}</svelte:element>
     <img src={data.image} alt="">
-    <p>{data.description}</p>
+    <div>
+      <p>{data.description}</p>
+    <p>{data.year}</p>
+    </div>
+    
 </article>
 
 <style>

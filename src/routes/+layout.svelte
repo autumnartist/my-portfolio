@@ -5,6 +5,7 @@
         {url: "./", title: "Home"},
         {url: "./projects", title: "My Projects"},
         {url: "./contact", title: "Contact Me"},
+        {url: "./meta", title: "Meta"},
         {url: "https://github.com/autumnartist", title: "GitHub"},
         {url: "./resume", title: "Resume"}
     ];
@@ -67,8 +68,8 @@
   display: flex;
   /* padding: 0.5em; */
   margin-bottom: 1cm;
-  margin-right: 4cm;
-  margin-left: 4cm;
+  /* margin-right: 4cm;
+  margin-left: 4cm; */
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: var(--border-color);

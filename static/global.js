@@ -4,66 +4,7 @@ function $$ (selector, context = document) {
 	return Array.from(context.querySelectorAll(selector));
 }
 
-
-//nav bar
-// let navLinks = $$("nav a");
-// let currentLink = navLinks.find(a => a.host === location.host && a.pathname === location.pathname);
-// currentLink?.classList.add("current");
-
-// Demo
-// let pages = [
-// 	{url: "./", title: "Home"},
-// 	{url: "/projects", title: "My Projects"},
-//     {url: "/contact", title: "Contact Me"},
-//     {url: "https://github.com/autumnartist", title: "GitHub"},
-//     {url: "/resume", title: "Resume"}
-// ];
-
-// Real thing
-// let pages = [
-//     { url: "/my-portfolio/",         title: "Home" },
-//     { url: "/my-portfolio/projects", title: "My Projects" },
-//     { url: "/my-portfolio/contact",  title: "Contact Me" },
-//     { url: "https://github.com/autumnartist", title: "GitHub" },
-//     { url: "/my-portfolio/resume",   title: "Resume" }
-//   ];
-
-// let nav = document.createElement("nav");
-// nav.classList.add("navBar");
-// document.body.prepend(nav);
-
-// for (let p of pages) {
-// 	let url = p.url;
-// 	let title = p.title;
-// 	// Create link and add it to nav
-//     let a = document.createElement("a");
-//     a.href = url;
-//     a.textContent = title;
-//     // setting the current tab
-//     if (a.host === location.host && a.pathname === location.pathname) {
-//         a.classList.add("current");
-//     }
-//     // making github open in another tab
-//     if (a.host !== location.host) {
-//         a.target = "_blank";
-//     };
-
-//     nav.append(a);
-
-// }
-
 //DARK MODE
-// document.body.insertAdjacentHTML("afterbegin", `
-// 	<label class="color-scheme">
-// 		Theme:
-// 		<select>
-//             <option value="light dark">Automatic</option>
-//             <option value="light">Light</option>
-//             <option value="dark">Dark</option>
-// 		</select>
-// 	</label>`
-// );
-
 let select = document.querySelector("select");
 if (localStorage.colorScheme) {
     document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme);
