@@ -11,8 +11,6 @@
     export let data = [];
 
     let sliceGenerator = d3.pie().value(d => d.value);
-    // let arcData = sliceGenerator(data);
-    // let arcs = arcData.map(d => arcGenerator(d));
     let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
         // Define arcData and arcs outside the reactive block
@@ -28,9 +26,6 @@
 
 <div class="container">
     <svg viewBox="-50 -50 100 100">
-        <!-- {#each arcs as arc, index}
-            <path d={ arc } fill={ colors(index) } />
-        {/each} -->
         {#each arcs as arc, index}
             <path d={arc} fill={ colors(index) }
                 class:selected={selectedIndex === index}

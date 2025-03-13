@@ -54,17 +54,17 @@
     .githubStats {
     border: 1px solid oklch(50% 10% 200 / 40%);
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    gap: 10px; /* Optional: space between grid items */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
     padding: 10px;
     }
     .githubStats dt {
-    grid-row: 1; /* All <dt> elements go to the first row */
+    grid-row: 1;
     font-weight: bold;
     
     }
     .githubStats dd {
-    grid-row: 2; /* All <dd> elements go to the second row */
-    margin: 0; /* Optional: remove any default margin on <dd> */
+    grid-row: 2;
+    margin: 0;
     }
 </style>

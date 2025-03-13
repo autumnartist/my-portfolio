@@ -16,16 +16,6 @@
     let root = globalThis?.document?.documentElement;
     $: root?.style.setProperty("color-scheme", colorScheme);
     $: localStorage.colorScheme = colorScheme;
-
-
-
-    // let pages = [
-    //     { url: "/my-portfolio/",         title: "Home" },
-    //     { url: "/my-portfolio/projects", title: "My Projects" },
-    //     { url: "/my-portfolio/contact",  title: "Contact Me" },
-    //     { url: "https://github.com/autumnartist", title: "GitHub" },
-    //     { url: "/my-portfolio/resume",   title: "Resume" }
-    //   ];
 </script>
 
 <body>
@@ -66,10 +56,9 @@
 }
 .navBar {
   display: flex;
-  /* padding: 0.5em; */
   margin-bottom: 1cm;
-  /* margin-right: 4cm;
-  margin-left: 4cm; */
+  margin-right: 4cm;
+  margin-left: 4cm;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: var(--border-color);

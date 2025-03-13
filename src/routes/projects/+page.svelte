@@ -46,7 +46,6 @@
 <body style="max-width:100ch; margin-inline: max(1em, (100% - 100ch) / 2)">
     <h1>{ projects.length } Projects</h1>
     <Pie data={pieData} bind:selectedIndex={selectedYearIndex} />
-    <!-- {selectedYearIndex} -->
     <input type="search" bind:value={query}
        aria-label="Search projects" placeholder="🔍 Search projects…" style="width:100%"/>
     <div class="projects">
