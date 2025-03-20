@@ -54,7 +54,7 @@
       let {author, date, time, timezone, datetime} = first;
       let ret = {
         id: commit,
-        url: "https://github.com/vis-society/lab-7/commit/" + commit,
+        url: "https://https://github.com/autumnartist/my-portfolio/commit/" + commit,
         author, date, time, timezone, datetime,
         hourFrac: datetime.getHours() + datetime.getMinutes() / 60,
         totalLines: lines.length
