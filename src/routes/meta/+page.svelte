@@ -7,6 +7,7 @@
     offset,
   } from '@floating-ui/dom';
   import Bar from '$lib/Bar.svelte';
+  import { base } from '$app/paths';
 
 
   //showing meta data
@@ -18,7 +19,7 @@
   let mostActiveTime = "Unknown";
 
   onMount(async () => {
-    data = await d3.csv("/loc.csv", row => ({
+    data = await d3.csv(`${base}/loc.csv`, row => ({
       ...row,
       line: Number(row.line), // or just +row.line
       depth: Number(row.depth),
