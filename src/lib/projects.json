@@ -1,74 +1,86 @@
 [
-    {
-        "title": "Data, Visualization, and Housing",
-        "year": "2024",
-        "image": "https://www.cambridgema.gov/-/media/Images/DHSP/CCPD/2016/housing.jpg",
-        "description": "Exploring how can we use data and visualization to analyze, communicate, and ultimately affect policy around the housing affordability crisis."
-    },
-    {
-        "title": "Exploratory Visual Analysis",
-        "year": "2024",
-        "image": "https://bpldcassets.blob.core.windows.net/derivatives/images/commonwealth:7h14cw17c/image_access_800.jpg",
-        "description": "Conducting an exploratory analysis using visualization on speculation and housing for the rich, with a focus on understanding the shape and structure of the data, investigating initial questions, and developing preliminary insights and hypotheses."
-    },
-    {
-        "title": "Visualization Critique & Redesign",
-        "year": "2024",
-        "image": "https://www.airforcemedicine.af.mil/portals/1/Images/Graphics/200309-D-HN545-003.png",
-        "description": "Focusing on design choices by critiquing a well-known visualization, and developing a redesign first through a series of sketches, and then through a final, polished version."
-    },
-    {
-        "title": "Persuasive or Deceptive Visualization?",
-        "year": "2024",
-        "image": "https://media.istockphoto.com/id/912932764/vector/vector-illustration-business-person-disguise-with-mask.jpg?s=612x612&w=0&k=20&c=zXMTgFFhEYKdMVrf0hrkbTx05mP73NWN5qvi-lYkLx4=",
-        "description": "Understanding how to design visualizations ethically by crafting two different, opposing perspectives to the same question posed about a single dataset."
-    },
-    {
-        "title": "Fugiat tenetur iusto deserunt?",
-        "year": "2022",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Repellat maiores error impedit mollitia voluptas nemo magni? Et unde repellat aperiam magnam adipisci commodi similique fugiat harum sapiente labore est id, quidem sit saepe totam, sunt consectetur doloribus numquam."
-    },
-    {
-        "title": "Eum et impedit tempora!",
-        "year": "2020",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Placeat nostrum, ipsa quae facere ab aspernatur, illum tempora, corporis maxime molestias architecto veniam inventore a cupiditate hic. Adipisci natus aliquam molestiae debitis hic ut, quis unde eum? Consequatur, ipsa?"
-    },
-    {
-        "title": "Ut molestias obcaecati assumenda.",
-        "year": "2021",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nulla, et doloremque illo eligendi tempore eum accusantium maxime ullam reiciendis quibusdam ut maiores nostrum unde cum corporis porro perspiciatis magni harum sequi dolores! Accusantium et voluptas quis explicabo laboriosam."
-    },
-    {
-        "title": "Delectus eaque quo odit!",
-        "year": "2021",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Expedita facilis soluta accusamus repellat repellendus commodi, eaque accusantium quisquam quidem cumque assumenda ullam, aperiam harum, saepe eius! Rerum dolore saepe perspiciatis ad accusamus quis accusantium, suscipit aliquid consequatur facere."
-    },
-    {
-        "title": "Minima saepe enim ipsum?",
-        "year": "2023",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Iste ipsam quia impedit consequatur magnam veniam, mollitia cumque temporibus blanditiis, accusamus velit culpa veritatis ab libero! Quasi laboriosam velit recusandae? Eum nemo modi ipsum eligendi non nostrum obcaecati facere."
-    },
-    {
-        "title": "Beatae, velit. Aut, quam!",
-        "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quo nulla aliquid iusto perspiciatis dolorem ea ratione modi repellat, delectus ducimus, atque recusandae dolore qui debitis accusamus at aspernatur dolor odio sunt. Iure laboriosam dolores tempore enim excepturi modi?"
-    },
-    {
-        "title": "Ut unde quos rem?",
-        "year": "2023",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quia in ex similique corrupti possimus ipsa labore, cumque eaque veritatis nam nesciunt sed illum commodi pariatur corporis saepe at quasi maiores harum tempore quibusdam ad et reprehenderit! Molestias, numquam."
-    },
-    {
-        "title": "Iste vero exercitationem accusantium?",
-        "year": "2019",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nisi, repellat? Distinctio unde similique repudiandae a corrupti, aspernatur quae sunt nam voluptatum cupiditate sint magni reprehenderit animi, culpa facere numquam enim, sed commodi exercitationem ipsam vitae repellat omnis. Sunt?"
-    }
+  {
+    "title": "Data, Visualization, and Housing",
+    "year": "2024",
+    "image": "https://www.cambridgema.gov/-/media/Images/DHSP/CCPD/2016/housing.jpg",
+    "description": "Exploring how can we use data and visualization to analyze, communicate, and ultimately affect policy around the housing affordability crisis.",
+    "url": ""
+  },
+  {
+    "title": "Exploratory Visual Analysis",
+    "year": "2024",
+    "image": "https://bpldcassets.blob.core.windows.net/derivatives/images/commonwealth:7h14cw17c/image_access_800.jpg",
+    "description": "Conducting an exploratory analysis using visualization on speculation and housing for the rich, with a focus on understanding the shape and structure of the data, investigating initial questions, and developing preliminary insights and hypotheses.",
+    "url": ""
+  },
+  {
+    "title": "Visualization Critique & Redesign",
+    "year": "2024",
+    "image": "https://www.airforcemedicine.af.mil/portals/1/Images/Graphics/200309-D-HN545-003.png",
+    "description": "Focusing on design choices by critiquing a well-known visualization, and developing a redesign first through a series of sketches, and then through a final, polished version.",
+    "url": ""
+  },
+  {
+    "title": "Persuasive or Deceptive Visualization?",
+    "year": "2024",
+    "image": "https://media.istockphoto.com/id/912932764/vector/vector-illustration-business-person-disguise-with-mask.jpg?s=612x612&w=0&k=20&c=zXMTgFFhEYKdMVrf0hrkbTx05mP73NWN5qvi-lYkLx4=",
+    "description": "Understanding how to design visualizations ethically by crafting two different, opposing perspectives to the same question posed about a single dataset.",
+    "url": ""
+  },
+  {
+    "title": "Bike watching",
+    "year": "2022",
+    "image": "/my-portfolio/static/images/bikeWatching.png",
+    "description": "An immersive, interactive map visualization of bike traffic in the Boston area during different times of the day.",
+    "url": "https://autumnartist.github.io/bikewatching/"
+  },
+  {
+    "title": "Eum et impedit tempora!",
+    "year": "2020",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Placeat nostrum, ipsa quae facere ab aspernatur, illum tempora, corporis maxime molestias architecto veniam inventore a cupiditate hic. Adipisci natus aliquam molestiae debitis hic ut, quis unde eum? Consequatur, ipsa?",
+    "url": ""
+  },
+  {
+    "title": "Ut molestias obcaecati assumenda.",
+    "year": "2021",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Nulla, et doloremque illo eligendi tempore eum accusantium maxime ullam reiciendis quibusdam ut maiores nostrum unde cum corporis porro perspiciatis magni harum sequi dolores! Accusantium et voluptas quis explicabo laboriosam.",
+    "url": ""
+  },
+  {
+    "title": "Delectus eaque quo odit!",
+    "year": "2021",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Expedita facilis soluta accusamus repellat repellendus commodi, eaque accusantium quisquam quidem cumque assumenda ullam, aperiam harum, saepe eius! Rerum dolore saepe perspiciatis ad accusamus quis accusantium, suscipit aliquid consequatur facere.",
+    "url": ""
+  },
+  {
+    "title": "Minima saepe enim ipsum?",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Iste ipsam quia impedit consequatur magnam veniam, mollitia cumque temporibus blanditiis, accusamus velit culpa veritatis ab libero! Quasi laboriosam velit recusandae? Eum nemo modi ipsum eligendi non nostrum obcaecati facere.",
+    "url": ""
+  },
+  {
+    "title": "Beatae, velit. Aut, quam!",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Quo nulla aliquid iusto perspiciatis dolorem ea ratione modi repellat, delectus ducimus, atque recusandae dolore qui debitis accusamus at aspernatur dolor odio sunt. Iure laboriosam dolores tempore enim excepturi modi?",
+    "url": ""
+  },
+  {
+    "title": "Ut unde quos rem?",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Quia in ex similique corrupti possimus ipsa labore, cumque eaque veritatis nam nesciunt sed illum commodi pariatur corporis saepe at quasi maiores harum tempore quibusdam ad et reprehenderit! Molestias, numquam.",
+    "url": ""
+  },
+  {
+    "title": "Iste vero exercitationem accusantium?",
+    "year": "2019",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Nisi, repellat? Distinctio unde similique repudiandae a corrupti, aspernatur quae sunt nam voluptatum cupiditate sint magni reprehenderit animi, culpa facere numquam enim, sed commodi exercitationem ipsam vitae repellat omnis. Sunt?",
+    "url": ""
+  }
 ]
