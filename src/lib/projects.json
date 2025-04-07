@@ -30,7 +30,7 @@
   {
     "title": "Bike watching",
     "year": "2022",
-    "image": "/my-portfolio/static/images/bikeWatching.png",
+    "image": "/images/bikeWatching.png",
     "description": "An immersive, interactive map visualization of bike traffic in the Boston area during different times of the day.",
     "url": "https://autumnartist.github.io/bikewatching/"
   },
