@@ -21,11 +21,7 @@
   $: total = d3.max(stackedData, (series) => d3.max(series, (d) => d[1])) || 1;
 
   // X scale for bar length
-  $: xScale = d3
-    .scaleLinear()
-    // .domain([0, d3.max(barData, (d) => d.count) || 1])
-    .domain([0, total])
-    .range([0, width]);
+  $: xScale = d3.scaleLinear().domain([0, total]).range([0, width]);
 </script>
 
 <div class="container">
@@ -88,7 +84,6 @@
 
   rect.hovered {
     opacity: 1;
-    /*stroke: black;*/
     stroke-width: 2;
   }
 

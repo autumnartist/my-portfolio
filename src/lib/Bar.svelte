@@ -17,14 +17,8 @@
   // X scale for bar length
   $: xScale = d3
     .scaleLinear()
-    .domain([0, d3.max(barData, (d) => d.count) || 1]) // Avoid empty data crash
+    .domain([0, d3.max(barData, (d) => d.count) || 1])
     .range([0, width]);
-
-  // Color scale for bar colors
-  //   $: colorScale = d3
-  //     .scaleOrdinal()
-  //     .domain(barData.map((d) => d.label))
-  //     .range(d3.schemeTableau10);
 </script>
 
 <div class="container">
@@ -71,59 +65,45 @@
 </div>
 
 <style>
-  /* ---------- Container Layout ---------- */
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  /* ---------- Bars ---------- */
   rect {
-    /*stroke: white;*/
     transition: all 300ms ease;
     cursor: pointer;
   }
 
-  /* Hover effect */
   rect.hovered {
     opacity: 1;
-    /*stroke: black;*/
     stroke-width: 2;
   }
 
-  /* Dim others when hovering */
   svg:has(rect.hovered) rect:not(.hovered) {
     opacity: 0.3;
   }
 
-  /* Selection effect */
   rect.selected {
-    /*stroke: black;*/
     stroke-width: 2;
   }
 
-  /* Dim others when selected */
   svg:has(rect.selected) rect:not(.selected) {
     opacity: 0.3;
   }
 
-  /* Combined hover + select */
   rect.selected.hovered {
-    /*stroke: black;*/
     stroke-width: 3;
     opacity: 1;
   }
 
-  /* ---------- Labels ---------- */
   .label {
     font-size: 0.75em;
     pointer-events: none;
     dominant-baseline: middle;
-    /* Fill is dynamically set */
   }
 
-  /* ---------- Legend ---------- */
   .legend {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
@@ -138,25 +118,21 @@
     text-align: left;
   }
 
-  /* Legend items */
   .legend li {
     color: var(--color);
     cursor: pointer;
     font-size: 0.85em;
   }
 
-  /* Highlight selected */
   .legend li.selected {
     font-weight: bold;
   }
 
-  /* Dim unselected when one selected */
   .legend:has(.selected) li:not(.selected) {
     color: gray;
     opacity: 0.5;
   }
 
-  /* Swatch */
   .legend li .swatch {
     background: var(--color);
     display: inline-block;
@@ -166,7 +142,6 @@
     margin-right: 0.25em;
   }
 
-  /* Count formatting */
   .legend em {
     font-style: normal;
     color: gray;

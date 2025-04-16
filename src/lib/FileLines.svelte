@@ -2,7 +2,6 @@
   import * as d3 from "d3";
   export let lines = [];
   export let colorScale;
-  //   export let colorScale = d3.scaleOrdinal(d3.schemeTableau10);
   export let svgWidth;
 
   let svg;
@@ -10,7 +9,6 @@
 
   const firstColumnWidth = 150;
   const fileInfoMargin = 100;
-  //   const dotsColumnX = firstColumnWidth + fileInfoMargin;
   const dotsColumnX = 350;
   const approxDotWidth = 20;
   const linesPerDot = 1;
@@ -18,7 +16,6 @@
   const totalLinesOffset = 20;
   const fileInfoHeight = baseY + totalLinesOffset;
   const dotRowHeight = 20;
-  //   const svgWidth = 1200;
 
   function generateDots(file) {
     const totalDots = Math.ceil(file.lines.length / linesPerDot);
@@ -51,30 +48,6 @@
     }
     return tspans;
   }
-
-  //   function generateDots(file) {
-  //     const totalDots = Math.ceil(file.lines.length / linesPerDot);
-  //     const availableWidth = svgWidth - dotsColumnX;
-  //     const maxDotsPerRow =
-  //       Math.floor(availableWidth / approxDotWidth) || totalDots;
-  //     const dotRows = Math.ceil(totalDots / maxDotsPerRow);
-
-  //     let tspans = "";
-  //     for (let r = 0; r < dotRows; r++) {
-  //       //   const count = Math.min(maxDotsPerRow, totalDots - r * maxDotsPerRow);
-  //       //   const rowDots = "•".repeat(count);
-  //       const rowLines = file.lines.slice(
-  //         r * maxDotsPerRow,
-  //         (r + 1) * maxDotsPerRow
-  //       );
-  //       const rowDots = rowLines
-  //         .map((line) => `<tspan style="fill:${colorScale(line.type)}">•</tspan>`)
-  //         .join("");
-
-  //       tspans += `<tspan x="${dotsColumnX}" dy="${r === 0 ? 0 : dotRowHeight}px">${rowDots}</tspan>`;
-  //     }
-  //     return tspans;
-  //   }
 
   $: files = d3
     .groups(lines, (d) => d.file) // [{file, lines: [...]}, …]
@@ -145,7 +118,6 @@
     enterGroups.attr("transform", (d, i) => `translate(0, ${positions[i]})`);
     merged
       .transition()
-      //   .duration(300)
       .duration(function (d, i) {
         const currentTransform =
           this.getAttribute("transform") || "translate(0,0)";
@@ -169,25 +141,34 @@
 
     groups.each(function (d) {
       const groupSel = d3.select(this);
+      // We check here if a transition is running.
+      if (groupSel.attr("data-transition-running") === "true") {
+        return; // If a transition is running, we skip this group for now.
+      }
       const unitDotsSel = groupSel.select("text.unit-dots");
-      const newCount = d.lines.length;
       const oldCount = previousDotCounts.get(d.name) || 0;
-
       unitDotsSel.html(generateDots(d, svgWidth));
-
+      const newCount = Math.ceil(d.lines.length / linesPerDot);
       if (newCount > oldCount) {
+        // Here we set flag to prevent overlapping transitions.
+        groupSel.attr("data-transition-running", "true");
         unitDotsSel
           .selectAll("tspan.dot")
           .filter(function () {
             return +this.getAttribute("data-index") >= oldCount;
           })
-          .attr("opacity", 0)
+          .style("opacity", 0)
           .transition()
           .duration(1000)
           .ease(d3.easeCubicOut)
-          .attr("opacity", 1);
+          .style("opacity", 1)
+          .on("end", function () {
+            // When the transition is finished, we clear the flag.
+            groupSel.attr("data-transition-running", "false");
+          });
+      } else {
+        groupSel.attr("data-transition-running", "false");
       }
-
       previousDotCounts.set(d.name, newCount);
     });
   }
