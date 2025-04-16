@@ -111,9 +111,9 @@
 
   //Bar chart
   $: allTypes = Array.from(new Set(data.map((d) => d.type)));
-  $: selectedLines = (
-    filteredCommits.length > 0 ? filteredCommits : commits
-  ).flatMap((d) => d.lines);
+  // $: selectedLines = (
+  //   filteredCommits.length > 0 ? filteredCommits : commits
+  // ).flatMap((d) => d.lines);
   $: selectedCounts = d3.rollup(
     selectedLines,
     (v) => v.length,
