@@ -131,7 +131,12 @@
   style="top: {tooltipPosition.y}px; left: {tooltipPosition.x}px"
 >
   <dt>Commit</dt>
-  <dd><a href={hoveredCommit.url} target="_blank">{hoveredCommit.id}</a></dd>
+  <dd>
+    <a
+      href={`https://github.com/autumnartist/my-portfolio/commit/${hoveredCommit.id}`}
+      target="_blank">{hoveredCommit.id}</a
+    >
+  </dd>
 
   <dt>Date</dt>
   <dd>{hoveredCommit.datetime?.toLocaleString("en", { dateStyle: "full" })}</dd>
