@@ -14,45 +14,49 @@
   // Direct mapping from flatRollup-like data: [label, count]
   $: barData = data.map(([label, count]) => ({ label, count }));
 
+  $: dataForStack = [Object.fromEntries(data)];
+  $: keys = data.map((d) => d[0]);
+  $: stackedData = d3.stack().keys(keys)(dataForStack);
+
+  $: total = d3.max(stackedData, (series) => d3.max(series, (d) => d[1])) || 1;
+
   // X scale for bar length
   $: xScale = d3
     .scaleLinear()
-    .domain([0, d3.max(barData, (d) => d.count) || 1]) // Avoid empty data crash
+    // .domain([0, d3.max(barData, (d) => d.count) || 1])
+    .domain([0, total])
     .range([0, width]);
-
-  // Color scale for bar colors
-  //   $: colorScale = d3
-  //     .scaleOrdinal()
-  //     .domain(barData.map((d) => d.label))
-  //     .range(d3.schemeTableau10);
 </script>
 
 <div class="container">
-  <svg {width} height={barHeight * barData.length}>
-    {#each barData as d, i (d.label)}
-      <rect
-        class:selected={selectedIndex === i}
-        class:hovered={hoveredIndex === i}
-        x="0"
-        y={i * barHeight}
-        width={xScale(d.count)}
-        height={barHeight - 5}
-        fill={colorScale(d.label)}
-        on:click={() => (selectedIndex = selectedIndex === i ? -1 : i)}
-        on:mouseenter={() => (hoveredIndex = i)}
-        on:mouseleave={() => (hoveredIndex = -1)}
-      />
-      <text
-        class="label"
-        x={xScale(d.count) > MIN_LABEL_WIDTH
-          ? xScale(d.count) - 5
-          : xScale(d.count) + 5}
-        y={i * barHeight + (barHeight - 5) / 2}
-        text-anchor={xScale(d.count) > MIN_LABEL_WIDTH ? "end" : "start"}
-        fill={xScale(d.count) > MIN_LABEL_WIDTH ? "white" : "black"}
-      >
-        {d.label}: {d.count}
-      </text>
+  <svg {width} height={barHeight}>
+    {#each stackedData as series, i (series.key)}
+      {#each series as d, j}
+        <rect
+          class:selected={selectedIndex === i}
+          class:hovered={hoveredIndex === i}
+          x={xScale(d[0])}
+          y="0"
+          width={xScale(d[1]) - xScale(d[0])}
+          height={barHeight - 5}
+          fill={colorScale(series.key)}
+          on:click={() => (selectedIndex = selectedIndex === i ? -1 : i)}
+          on:mouseenter={() => (hoveredIndex = i)}
+          on:mouseleave={() => (hoveredIndex = -1)}
+        />
+        {#if xScale(d[1]) - xScale(d[0]) > MIN_LABEL_WIDTH}
+          <text
+            class="label"
+            x={(xScale(d[0]) + xScale(d[1])) / 2}
+            y={barHeight / 2}
+            text-anchor="middle"
+            fill="white"
+            dominant-baseline="middle"
+          >
+            {series.key}: {d[1] - d[0]}
+          </text>
+        {/if}
+      {/each}
     {/each}
   </svg>
 
