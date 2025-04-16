@@ -126,8 +126,11 @@
 
   // Brushing
   $: selectedLines = (
-    selectedCommits.length > 0 ? selectedCommits : commits
+    selectedCommits.length > 0 ? selectedCommits : filteredCommits
   ).flatMap((d) => d.lines);
+  // $: selectedLines = (
+  //   selectedCommits.length ? selectedCommits : filteredCommits
+  // ).flatMap((d) => d.lines);
   $: hasSelection = selectedCommits && selectedCommits.length > 0;
 </script>
 
@@ -179,7 +182,6 @@
     {/each}
     <svelte:fragment slot="viz">
       <CommitScatterplot commits={filteredCommits} bind:selectedCommits />
-
       <StackedBar data={languageBreakdown} width={width * 0.6} {colorScale} />
     </svelte:fragment>
   </Scrolly>
