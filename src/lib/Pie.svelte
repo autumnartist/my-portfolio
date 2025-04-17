@@ -35,11 +35,17 @@
   let liveText = "";
   function toggleWedge(index, event) {
     if (!event.key || event.key === "Enter") {
-      selectedIndex = index;
-      const d = data[index];
-      liveText = `${d.label}: ${d.value} projects selected.`;
+      if (selectedIndex === index) {
+        selectedIndex = -1;
+        liveText = `No projects selected.`;
+      } else {
+        selectedIndex = index;
+        const d = data[index];
+        liveText = `${d.label}: ${d.value} projects selected.`;
+      }
     }
   }
+
   $: description = `A pie chart showing project counts by year. ${data.map((d) => `${d.label}: ${d.value} projects`).join(", ")}.`;
 </script>
 
@@ -67,7 +73,7 @@
           d={arc}
           fill={colors(index)}
           class:selected={selectedIndex === index}
-          on:click={(e) => (toggleWedge(index, e) === index ? -1 : index)}
+          on:click={(e) => toggleWedge(index, e)}
           on:keyup={(e) => toggleWedge(index, e)}
           tabindex="0"
           role="button"
