@@ -109,17 +109,26 @@
   />
   <g class="dots">
     {#each commits as commit, index (commit.id)}
-      <circle
-        class:selected={selectedCommits.includes(commit)}
+      <g
+        role="button"
+        tabindex="0"
+        aria-label={`Commit by ${commit.author} on ${commit.datetime}`}
         on:click={(evt) => dotInteraction(index, evt)}
+        on:keydown={(e) => e.key === "Enter" && dotInteraction(index, e)}
         on:mouseenter={(evt) => dotInteraction(index, evt)}
         on:mouseleave={(evt) => dotInteraction(index, evt)}
-        cx={xScale(commit.datetime)}
-        cy={yScale(commit.hourFrac)}
-        r={rScale(commit.totalLines)}
-        fill="steelblue"
-        fill-opacity={hoveredIndex === index ? 1 : 0.6}
-      />
+      >
+        <circle
+          class:selected={selectedCommits.includes(commit)}
+          cx={xScale(commit.datetime)}
+          cy={yScale(commit.hourFrac)}
+          r={rScale(commit.totalLines)}
+          fill="steelblue"
+          fill-opacity={hoveredIndex === index ? 1 : 0.6}
+          aria-describedby="commit-tooltip"
+          role="tooltip"
+        />
+      </g>
     {/each}
   </g>
 </svg>
